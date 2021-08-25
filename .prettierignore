@@ -8,4 +8,12 @@ jspm_packages
 # Webpack directories
 .webpack
 
+#macOS files
 .DS_Store
+
+#config files
+tsconfig.json
+tsconfig.paths.json
+webpack.config.js
+.eslintrc.json
+
