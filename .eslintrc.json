@@ -5,7 +5,7 @@
         "es2021": true
     },
     "extends": [
-        "standard"
+        "standard", "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -20,6 +20,7 @@
             "warn",
             "never"
         ],
+        "comma-dangle": ["warn", "never"],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": [
             "error"
@@ -34,13 +35,8 @@
     "settings": {
         "import/parsers": {
             "@typescript-eslint/parser": [
-                ".ts"
+                ".ts" , ".js"
             ]
-        },
-        "import/resolver": {
-            "typescript": {
-                "alwaysTryTypes": true
-            }
         }
     }
 }

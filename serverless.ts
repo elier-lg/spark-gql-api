@@ -1,6 +1,6 @@
-import type { AWS } from '@serverless/typescript';
+import type { AWS } from '@serverless/typescript'
 
-import apollo from '@functions/apollo';
+import apollo from '@functions/apollo'
 
 const serverlessConfiguration: AWS = {
   service: 'spark-gql-api',
@@ -8,8 +8,8 @@ const serverlessConfiguration: AWS = {
   custom: {
     webpack: {
       webpackConfig: './webpack.config.js',
-      includeModules: true,
-    },
+      includeModules: true
+    }
   },
   plugins: ['serverless-webpack', 'serverless-offline'],
   provider: {
@@ -17,15 +17,15 @@ const serverlessConfiguration: AWS = {
     runtime: 'nodejs14.x',
     apiGateway: {
       minimumCompressionSize: 1024,
-      shouldStartNameWithService: true,
+      shouldStartNameWithService: true
     },
     environment: {
-      AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+      AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
     },
-    lambdaHashingVersion: '20201221',
+    lambdaHashingVersion: '20201221'
   },
   // import the function via paths
-  functions: { apollo },
-};
+  functions: { apollo }
+}
 
-module.exports = serverlessConfiguration;
+module.exports = serverlessConfiguration

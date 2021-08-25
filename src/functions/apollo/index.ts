@@ -1,4 +1,4 @@
-import { handlerPath } from '@libs/handlerResolver';
+import { handlerPath } from '@libs/handlerResolver'
 
 export default {
   handler: `${handlerPath(__dirname)}/handler.graphqlHandler`,
@@ -6,8 +6,8 @@ export default {
     {
       http: {
         method: 'any',
-        path: 'graphql',         
-        cors: true         
+        path: 'graphql',
+        cors: true
       }
     }
   ]

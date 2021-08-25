@@ -9,7 +9,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
   }
-`;
+`
 
 const users = [
   {
@@ -19,16 +19,16 @@ const users = [
   {
     firstName: 'Nicole',
     lastName: 'Kidman'
-  },
-];
+  }
+]
 
 const resolvers = {
   Query: {
     users: () => users
   }
-};
+}
 
-const apolloServer = new ApolloServer({ resolvers, typeDefs });
+const apolloServer = new ApolloServer({ resolvers, typeDefs })
 
-const graphqlHandler = apolloServer.createHandler();
+const graphqlHandler = apolloServer.createHandler()
 export { graphqlHandler }
